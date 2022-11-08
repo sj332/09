@@ -6,9 +6,25 @@
 
 void main(void) {
 	
-	char str[30]="happy C programming";
+	FILE*fp;
+	char str[30];
 	
-	printf("πÆ¿⁄ø≠\"%s\"¿« ±Ê¿Ã:%i",str,strlen(str));
+	fp=fopen("sample.txt","w");
+	
+	printf("input a word: ");
+	scanf("%s",str); //&æ»æ∏ 
+	fprintf(fp,"%s\n",str);
+	
+	printf("input a word: ");
+	scanf("%s",str); //&æ»æ∏ 
+	fprintf(fp,"%s\n",str);
+	
+	printf("input a word: ");
+	scanf("%s",str); //&æ»æ∏ 
+	fprintf(fp,"%s\n",str);
+	
+	
+	fclose(fp);
 	
 	return 0;
 }
